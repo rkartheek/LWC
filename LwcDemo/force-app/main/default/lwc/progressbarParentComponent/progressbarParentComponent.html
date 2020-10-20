@@ -1,0 +1,19 @@
+<!--
+  @description       : 
+  @author            : Kartheek Racherla
+  @group             : 
+  @last modified on  : 10-16-2020
+  @last modified by  : Kartheek Racherla
+  Modifications Log 
+  Ver   Date         Author              Modification
+  1.0   10-16-2020   Kartheek Racherla   Initial Version
+-->
+<template>
+    <h3>Demo to show parent to child data communication on action at parent level</h3>
+    <div class="field">
+        <label for="name">Enter your percentage:</label>
+        <input id="percentage" type="number" min="0" max="100" name="percentage" onkeyup={changeHandler}
+            value={percentage} />
+    </div>
+    <c-progress-bar-child-component percentage={percentage}></c-progress-bar-child-component>
+</template>

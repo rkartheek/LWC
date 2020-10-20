@@ -1,0 +1,21 @@
+<!--
+  @description       : 
+  @author            : Kartheek Racherla
+  @group             : 
+  @last modified on  : 10-16-2020
+  @last modified by  : Kartheek Racherla
+  Modifications Log 
+  Ver   Date         Author              Modification
+  1.0   10-16-2020   Kartheek Racherla   Initial Version
+-->
+<template>
+    <div class="parent-section" onshow={showHandler}>
+        <p>I am parent component</p>
+        <template if:true={showNotification}>
+            <div class="notificationbox">
+                <span>Notification from Child. Event bubbled successfully!</span>
+            </div>
+        </template>
+        <c-notify-child-component></c-notify-child-component>
+    </div>
+    </template>

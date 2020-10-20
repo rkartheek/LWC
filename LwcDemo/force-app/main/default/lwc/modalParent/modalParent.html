@@ -1,0 +1,21 @@
+<!--
+  @description       : 
+  @author            : Kartheek Racherla
+  @group             : 
+  @last modified on  : 10-16-2020
+  @last modified by  : Kartheek Racherla
+  Modifications Log 
+  Ver   Date         Author              Modification
+  1.0   10-16-2020   Kartheek Racherla   Initial Version
+-->
+<template>
+    <button class="btn success" onclick={showHandler}>Open Modal</button>
+    <template if:true={showModal}>
+        <c-modal-child
+            header-text="Message !!"
+            body-text="This Modal is a child component. Triggered from parent and on click of Close button it will dispatch an event to parent handler and that close the modal"
+            onclose={modalCloseHandler}
+        >
+        </c-modal-child>
+    </template>
+</template>
